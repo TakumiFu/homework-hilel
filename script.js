@@ -1,16 +1,50 @@
+const products = [
+  {
+    name: "Смартфон",
+    price: 25000,
+    stock: 10,
+    category: "Электроника",
+    rating: 4.7,
+    isOnSale: false,
+  },
+  {
+    name: "Ноутбук",
+    price: 55000,
+    stock: 5,
+    category: "Электроника",
+    rating: 4.5,
+    isOnSale: true,
+  },
+  {
+    name: "Наушники",
+    price: 3000,
+    stock: 25,
+    category: "Аксессуары",
+    rating: 4.2,
+    isOnSale: false,
+  },
+  {
+    name: "Клавиатура",
+    price: 1500,
+    stock: 15,
+    category: "Периферия",
+    rating: 3.9,
+    isOnSale: true,
+  },
+  {
+    name: "Монитор",
+    price: 12000,
+    stock: 8,
+    category: "Электроника",
+    rating: 4.8,
+    isOnSale: false,
+  },
+];
 
-for (let i = 1; i <= 10; i++) {
-    console.log(`7 * ${i} = ${7 * i}`);
-}
 
-// 2
-
-function currencyConverter(hryvnia, dollarRate) {
-    const dollars = hryvnia / dollarRate;
-    console.log(`У вас ${hryvnia} гривен, если вы хотите купить доллар, то за ${hryvnia} вы получите ${dollars.toFixed(2)} долларов!`);
-}
+products.forEach(product => {
+  const newPrice = product.price * 42;
+  console.log(`Продукт: ${product.name}, Нова ціна: ${newPrice}`);
+});
 
 
-currencyConverter(2500, 42); 
-currencyConverter(5700, 42);
-currencyConverter(28000, 42); 
